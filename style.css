@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 36px;
+  color: #00cec9;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  color: #333;
+}
+
+select, input, button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #00cec9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #00b2a9;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.seat.selected {
+  background-color: #00cec9;
+  color: white;
+}
+
+.seat.booked {
+  background-color: #636e72;
+  cursor: not-allowed;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+#success-message {
+  padding: 50px;
+  background-color: #00cec9;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
